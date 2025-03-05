@@ -4,7 +4,9 @@ import os
 import requests
 import urllib
 
-client = discord.Client()
+intents = discord.Intents.default()
+intents.message_content = True
+client = discord.Client(intents=intents)
 
 who_count = 0
 
