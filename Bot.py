@@ -21,7 +21,7 @@ async def on_message(message):
     if message.author == client.user:
         return
 
-    if message.content.startswith('Hi') | message.content.startswith('hi'):
+    if message.content.lower().startswith('hi') or message.content.lower().startswith('hello'):
         await message.channel.send('Hi!')
         return
 
